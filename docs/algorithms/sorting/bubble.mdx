@@ -1,0 +1,34 @@
+---
+title: Bubble Sort
+sidebar_position: 1
+---
+
+import {BubbleSort} from "@local/components/bubble-sort"
+
+Bubble sort is a very simple algorithm which repetedly iterates through
+a list, swapping items in the desired order, until nothing is it is left
+in the sorted state.
+
+## Algorithm
+
+```javascript title="bubble-sort.js"
+for (let i = items.length - 1; i > 0; i--) {
+  for (let j = 0; j < i; j++) {
+    if (items[j] > items[j + 1]) {
+      const tmp = items[j];
+      items[j] = items[j + 1];
+      items[j + 1] = tmp;
+    }
+  }
+}
+```
+
+## Complexity
+
+| time | space | 
+| :-: | :-: |
+| $O(n^2)$ | $O(n)$ |
+
+## Sandbox
+
+<BubbleSort/>
