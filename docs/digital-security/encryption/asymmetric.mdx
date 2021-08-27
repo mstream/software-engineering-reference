@@ -3,20 +3,18 @@ title: Asymmetric Encryption
 sidebar_position: 2
 ---
 
+import {Diagram} from '@local/components/diagram'
+import {authenticityDef, confidentialityDef} from '@local/diagrams/asymmetric-encryption.js'
+
 ## Overview {#overview}
 
-person1: priv1, pub1
-person2: priv2, pub2
+## Confidentality {#confidentality}
 
-person1
-alg(m, priv1) -> iem
-alg(m, pub2) -> cem
+<Diagram>
+  {confidentialityDef}
+</Diagram>
 
-person2
-alg(iem, pub1) -> m
-alg(cem, priv2) -> m
-
-
-
-
-
+## Authenticity {#authenticity}
+<Diagram>
+  {authenticityDef}
+</Diagram>
